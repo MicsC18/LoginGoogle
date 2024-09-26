@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Gestión de Usuarios</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="DarDeBaja.css">
+    <script defer src="DarDeBaja.js"></script>
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-4 mb-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="text-center flex-grow-1 m-0 text-lg-start">Gestión de Control - Administrador</h1>
+            <!-- Perfil -->
+            <div class="dropdown">
+                <a class="btn btn-outline-light dropdown-toggle d-flex align-items-center" href="#" role="button" id="perfilDropdown"
+                    data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle me-2"></i> Perfil
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="perfilDropdown">
+                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <div class="container mb-4">
+        <ul class="nav nav-tabs" id="adminTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="bajaUsuario-tab" data-bs-toggle="tab" data-bs-target="#bajaUsuario" type="button" role="tab" aria-controls="bajaUsuario" aria-selected="true">Gestionar Usuarios</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="modelos-tab" data-bs-toggle="tab" data-bs-target="#modelos" type="button" role="tab" aria-controls="modelos" aria-selected="false">Gestionar Reportes</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contenido de las Tabs -->
+    <div class="container">
+        <div class="tab-content" id="adminTabContent">
+            <!-- Gestión de Usuarios -->
+            <div class="tab-pane fade show active" id="bajaUsuario" role="tabpanel" aria-labelledby="bajaUsuario-tab">
+                <div class="row">
+                    <!-- Dar de baja o suspender a Usuario -->
+                    <div class="col-md-6">
+                        <div class="container-form">
+                            <h3>Dar de baja a Usuario</h3>
+                            <p>Busca un usuario para darlo de baja o suspender temporalmente</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="MailUsuario" class="form-label">Mail del usuario</label>
+                                    <input type="email" class="form-control" id="MailUsuario" placeholder="Ingrese su Mail">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="problemaUnidad" class="form-label">Problema de la Unidad</label>
+                                    <textarea class="form-control" id="MotivoSancion" name="MotivoSancion" rows="4" placeholder="Describa la razón por la que se sanciona al usuario." required></textarea>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="accionSelect">Acción a realizar</label>
+                                    <select name="accion" id="accionSelect" class="form-control">
+                                        <option value="">Seleccione la acción a realizar</option>
+                                        <option value="Dardebaja">Dar de baja usuario</option>
+                                        <option value="Suspender">Suspender usuario</option>
+                                    </select>
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                                <div class="mb-3 hidden" id="suspensionDateDiv">
+                                    <label for="suspensionDate" class="form-label">Fecha de fin de suspensión</label>
+                                    <input type="date" class="form-control" id="suspensionDate">
+                                    <div class="invalid-feedback"></div>
+                                </div>                                
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-danger" id="btnGuardarCambiosUsuario">Guardar Cambios</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Desactivar Cuenta -->
+                    <div class="col-md-6">
+                        <div class="container-form">
+                            <h3>Desactivar suspension</h3>
+                            <p>Introduce los datos necesarios.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="MailUsuario" class="form-label">Mail del usuario</label>
+                                    <input type="email" class="form-control" id="MailUsuario" placeholder="Ingrese su Mail">
+                                </div>
+                              
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-success">Desactivar suspensión</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gestión de Reportes -->
+            <div class="tab-pane fade" id="modelos" role="tabpanel" aria-labelledby="modelos-tab">
+                <div class="container-table">
+                    <h3>Publicaciones Reportadas</h3>
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Título</th>
+                                <th>Motivo</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>Publicación 1</td>
+                                <td>Contenido inapropiado</td>
+                                <td>
+                                    <button class="btn btn-info btn-sm">Ver motivos</button>
+                                    <button class="btn btn-danger btn-sm">Eliminar publicación</button>
+                                </td>
+                            </tr>
+                            <!-- Más filas -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
