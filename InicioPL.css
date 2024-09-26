@@ -1,0 +1,91 @@
+#headerDiv {
+    border: 1px solid rgb(226, 226, 226);
+    background-color: #f8c06d !important; 
+    max-width: 100%; /* Ajustar a 100% para usar el espacio disponible */
+    height: auto; /* Mantener automático para evitar excesos */
+    margin-bottom: 20px; /* Espacio inferior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+.dynamic-header {
+    background-color: #f8c06d ; /* Valor predeterminado */
+}
+
+
+#search-bar {
+    max-width: 400px; /* Aumentar el tamaño máximo del buscador */
+}
+
+#search-bar input[type="text"] {
+    border: 1px solid #ced4da; /* Borde del buscador */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+#search-bar input[type="text"]:focus {
+    border-color: #6c757d; /* Cambiar color de borde en enfoque */
+    box-shadow: 0 0 5px rgba(108, 117, 125, 0.5); /* Sombra en enfoque */
+}
+
+#Logo {
+    max-width: 150px; /* Ajusta este valor según necesites */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Estilos para los enlaces de autenticación */
+.auth-buttons a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007bff; /* Color de enlace */
+    margin-left: 10px; /* Espacio entre enlaces */
+}
+
+.auth-buttons a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.book-item {
+    background-color: #fcf0f0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; /* Transición suave */
+}
+.book-list h5 {
+    font-weight: bold; /* Negrita para el título */
+    margin-top: 20px; /* Espacio arriba del título */
+    margin-left: 50px;
+    
+}
+.btn {
+    width: 100%; /* Hace que el botón ocupe todo el ancho de la columna */
+    margin-bottom: 10px; /* Espacio entre los botones */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    margin-top: 15px; /* Espacio superior */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(247, 185, 185, 0.8); /* Fondo blanco semi-transparente (opcional) */
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+    height: 40px;
+    width: 40px;
+    margin-top: 70px;
+    margin-left: 240px;
+    margin-right: 230px;
+
+}
+
+#ControlNextClasicos, 
+#ControlPrevClasicos{
+    margin:0px;
+    margin-top:30px;
+}
+

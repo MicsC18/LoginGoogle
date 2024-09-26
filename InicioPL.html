@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home PasaLibros</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="InicioPL.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container-lg" id="headerDiv">
+        <div class="row align-items-center p-3">
+            <div id="Logo" class="col-sm-3 text-start">
+                <h3>PasaLibros</h3>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center"> <!-- Centro el buscador -->
+                <div class="input-group" id="search-bar">
+                    <input type="text" class="form-control" placeholder="Buscar libros..." aria-label="Buscar libros...">
+                    <span class="input-group-text">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-4 text-end auth-buttons">
+                <p><a href="#">Iniciar Sesión</a>|<a href="#">Registrarse</a></p>
+            </div>
+        </div>
+    </div><br>
+
+    <!-- Listado de publicaciones -->
+    <section class="book-list my-4">
+        <h5>Publicados Recientemente</h5>
+        <div id="recentlyPublishedCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container border rounded p-4"> 
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 1</h3>
+                                    <p>Descripción del libro 1...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 2</h3>
+                                    <p>Descripción del libro 2...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 3</h3>
+                                    <p>Descripción del libro 3...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 4</h3>
+                                    <p>Descripción del libro 4...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container border rounded p-4"> 
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 5</h3>
+                                    <p>Descripción del libro 5...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 6</h3>
+                                    <p>Descripción del libro 6...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 7</h3>
+                                    <p>Descripción del libro 7...</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="book-item border p-3 rounded mb-3">
+                                    <h3>Libro 8</h3>
+                                    <p>Descripción del libro 8...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  agregar más item  -->
+            </div>
+            <!-- Botones de navegación fuera del carousel-inner -->
+            <div class="carousel-controls">
+                <button class="carousel-control-prev" type="button" data-bs-target="#recentlyPublishedCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#recentlyPublishedCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="book-list my-4">
+        <h5>Clásicos</h5>
+        <div id="ClasicosCarrusel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 1</h3>
+                                <p>Descripción del libro 1...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 2</h3>
+                                <p>Descripción del libro 2...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 3</h3>
+                                <p>Descripción del libro 3...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 4</h3>
+                                <p>Descripción del libro 4...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 5</h3>
+                                <p>Descripción del libro 5...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 6</h3>
+                                <p>Descripción del libro 6...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 7</h3>
+                                <p>Descripción del libro 7...</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="book-item border p-3 rounded mb-3">
+                                <h3>Libro 8</h3>
+                                <p>Descripción del libro 8...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="ControlPrevClasicos" class="carousel-control-prev" type="button" data-bs-target="#ClasicosCarrusel" data-bs-slide="prev">
+                <span  class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button id="ControlNextClasicos" class="carousel-control-next" type="button" data-bs-target="#ClasicosCarrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section><br><br>
+
+    <section class="book-list my-4" class="categorias">
+        <h5>Categorías</h5>
+        <div class="container border rounded shadow-sm p-4">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary">Fantasía</button>
+                </div>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Terror</button>
+                </div>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Historia</button>
+                </div>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Comics y Mangas</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Arte</button>
+                </div><br>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Infantiles</button>
+                </div>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Filosofía</button>
+                </div>
+                <div class="col">
+                    <button type="button"  class="btn btn-primary">Biografía</button>
+                </div>
+            </div>
+        </div>
+    </section><br>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container p-4">
+            <section class="mb-4">
+                <p>Gracias por visitar nuestro sitio. Mantente conectado con nuestras redes sociales.</p>
+            </section>
+        </div>
+        <p class="mb-0">PasaLibros © 2024 - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
